@@ -109,7 +109,7 @@ input,select,textarea{
       <a href="#ozellik">Özellikler</a>
       <a href="#keyler">Key</a>
       <a href="#kurulum">Kurulum</a>
-      <a href="#iletisim">İletişim</a>
+      <a href="#iletisim">Admin</a>
       <a class="btn-apk" href="TikTokMobileStudio.apk" download>APK İndir</a>
       <a class="btn-key" href="#keyler">Key Al</a>
     </div>
@@ -203,25 +203,13 @@ input,select,textarea{
   </section>
 
   <section class="sec" id="iletisim">
-    <h2>Ödeme sonrası / iletişim</h2>
-    <p class="sub">WhatsApp yok. Gmail ile yaz.</p>
-    <div class="card mail-box">
-      <label class="muted">Ad</label>
-      <input id="ad" placeholder="Adın">
-      <label class="muted">Paket</label>
-      <select id="paket">
-        <option>1 Haftalık Key</option>
-        <option>1 Aylık Key</option>
-        <option>2 Aylık Key</option>
-        <option>7 Aylık Key</option>
-        <option>1 Yıllık Key</option>
-      </select>
-      <label class="muted">Cihaz ID (uygulama ana ekranında)</label>
-      <input id="cid" placeholder="Örn. 2bcldpfp68kfjm">
-      <label class="muted">Not</label>
-      <textarea id="not" rows="3" placeholder="Shopier dekont no / ekstra bilgi"></textarea>
-      <button class="buy" onclick="gmailGonder()">Gmail ile gönder</button>
-      <p class="muted">Gmail açılmazsa kopyala: <b id="mailGoster">GMAIL_ADRESINI_YAZ</b></p>
+    <h2>Admin’e ulaş</h2>
+    <p class="sub">TikTok veya e-posta.</p>
+    <div style="text-align:center;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-apk" style="display:inline-block;padding:14px 28px;font-size:16px"
+         href="https://www.tiktok.com/@mordecai.4?_r=1&_t=ZS-99hjNCl7gzl" target="_blank" rel="noopener">Admin’e ulaş</a>
+      <a class="btn btn-key" style="display:inline-block;padding:14px 28px;font-size:16px"
+         href="mailto:tiktokmobilstudio@gmail.com?subject=TikTok%20Mobile%20Studio%20key&body=Merhaba%2C%0AKey%20almak%20istiyorum.%0APaket%3A%0ACihaz%20ID%3A%0A">E-posta gönder</a>
     </div>
   </section>
 
@@ -235,7 +223,7 @@ input,select,textarea{
 
 <footer>
   <div class="wrap">
-    TikTok Mobile Studio · <a href="mailto:tiktokmobilstudio@gmail.com">Gmail</a>
+    TikTok Mobile Studio · <a href="https://www.tiktok.com/@mordecai.4?_r=1&_t=ZS-99hjNCl7gzl" target="_blank" rel="noopener">Admin TikTok</a>
     · Satış key / lisans içindir
   </div>
 </footer>
@@ -249,7 +237,6 @@ const SHOPIER = {
   "7ay": "https://www.shopier.com/",
   yil: "https://www.shopier.com/"
 };
-document.getElementById("mailGoster").textContent = GMAIL;
 function shopier(k){ window.open(SHOPIER[k] || "https://www.shopier.com/", "_blank"); }
 function gmailGonder(){
   const ad = document.getElementById("ad").value.trim();
